@@ -8,6 +8,7 @@
   outline: none;
   border: none;
   cursor: pointer;
+  /* box-shadow: 0 3px #999; */
 }
 
 .btn:hover {
@@ -15,6 +16,12 @@
   transition: all 0.3s ease-out;
   background: #6568f4;
   transition: 250ms;
+}
+
+.btn:active {
+  background-color: #6568f4;
+  /* box-shadow: 0 5px #666; */
+  transform: translateY(4px);
 }
 
 .btn--primary {
