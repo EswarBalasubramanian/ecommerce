@@ -65,6 +65,7 @@ const Carousel = () => {
     if (isTicking) {
       setTimeout(() => {
         setIsTicking(false);
+        // dfDae
       }, 300);
     }
   }, [isTicking]);
