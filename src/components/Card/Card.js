@@ -19,15 +19,22 @@ function Card(props) {
 
   return (
     <div className="card">
-      <img src={imageUrl} alt="cardImage" />
       {/* <p>{title}</p> */}
-      <div className="card-content">
-        <div className="card__text">MRP: ₹{price}</div>
-        <label>Quantity</label>
-        <div class="number">
-          <Button onClick={decrement}>-</Button>
-          <input type="text" value={count} />
-          <Button onClick={increment}>+</Button>
+
+      <div class="row">
+        <div class="col-1-of-2">
+          <img className="card__image" src={imageUrl} alt="cardImage" />
+        </div>
+        <div class="col-1-of-2">
+          <div className="card-content">
+            <div className="card__text">MRP: ₹{price}</div>
+            <label>Quantity</label>
+            <div class="number">
+              <Button onClick={decrement}>-</Button>
+              <input type="text" value={count} />
+              <Button onClick={increment}>+</Button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -35,26 +42,3 @@ function Card(props) {
 }
 
 export default Card;
-
-{
-  /* <Card
-          imageUrl="https://picsum.photos/300/200"
-          title="Book"
-          price="399"
-        />
-        <Card
-          imageUrl="https://picsum.photos/300/200"
-          title="Mobile"
-          price="459"
-        />
-        <Card
-          imageUrl="https://picsum.photos/300/200"
-          title="Speaker"
-          price="1599"
-        />
-        <Card
-          imageUrl="https://picsum.photos/300/200"
-          title="Vase"
-          price="599"
-        /> */
-}

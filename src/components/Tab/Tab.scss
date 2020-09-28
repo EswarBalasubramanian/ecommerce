@@ -9,10 +9,32 @@ body {
     background-color: white;
 }
 
+.tab-container-big {
+    height: 80vh;
+    width: 65vw;
+
+    background-color: #fff;
+
+    margin: 1rem;
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+// .tab-container-small {
+//     height: 80vh;
+//     width: 25vw;
+
+//     background-color: red;
+
+//     margin: 1rem;
+//     border-radius: 15px;
+//     padding: 1rem;
+// }
+
 .tab {
     //min-height:50px;
     width: 100%;
-    padding: 25px;
+    padding: 1rem;
     font-family: sans-serif;
     color: #444;
 }
@@ -30,8 +52,8 @@ ul.inline {
     li {
         display: inline-block;
         margin-left: 0;
-        padding: 10px;
-        border-bottom: 2px solid #eee;
+        padding: 20px;
+        border-bottom: 2px solid transparent;
         transition: all .5s;
         font-family: sans-serif;
         font-weight: 300;

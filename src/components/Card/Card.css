@@ -1,15 +1,23 @@
 .card {
-  display: inline-block;
+  display: flex;
+  height: 30%;
+  width: 35%;
+  border-radius: 15px;
   border: 2px solid #e7e7e7;
-  width: fit-content;
-  border-radius: 9px;
-  margin: 0.5rem;
-  padding: 0.5rem;
+}
+
+.card__image {
+  top: 50%;
+  padding: 5px;
+  height: 6rem;
 }
 
 .card-content {
+  /* float: right; */
   padding-left: 2px;
 }
+
+/* 
 
 .card__text {
   font-size: larger;
@@ -27,7 +35,8 @@ button {
   justify-content: center;
 }
 
-input {
+ */
+/* input {
   height: 38px;
   width: 100px;
   text-align: center;
@@ -38,4 +47,4 @@ input {
   vertical-align: middle;
   margin-left: 5px;
   margin-right: 5px;
-}
+} */

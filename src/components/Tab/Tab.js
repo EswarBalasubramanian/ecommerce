@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Tab.scss";
+// import Card from "../Card/Card";
 
 function Tabs(props) {
   const [selected, setSelected] = useState(props.selected || 0);
@@ -9,7 +10,7 @@ function Tabs(props) {
   }
 
   return (
-    <div>
+    <div className="tab-container-big">
       <ul className="inline">
         {props.children.map((elem, index) => {
           let style = index === selected ? "selected" : "";
@@ -36,9 +37,11 @@ function Panel(props) {
 function Tab() {
   return (
     <Tabs selected={0}>
-      <Panel title="first">This is the first panel</Panel>
-      <Panel title="second">This is the second panel</Panel>
-      <Panel title="third">This is the third panel</Panel>
+      <Panel title="Best Seller">
+        {/* <Card imageUrl="https://images.unsplash.com/photo-1526947425960-945c6e72858f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" /> */}
+      </Panel>
+      <Panel title="Popular">This is the second panel</Panel>
+      <Panel title="Based on your search">This is the third panel</Panel>
     </Tabs>
   );
 }
