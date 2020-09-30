@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,43 +7,10 @@
   font-family: "Lato", sans-serif;
 }
 body {
-  background: #333;
+  background: rgb(230, 230, 230);
   overflow-x: hidden;
 }
 
-.row {
-  max-width: 100rem;
-  margin: 0 auto;
-}
-.row:not(:last-child) {
-  margin-bottom: 2rem;
-}
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.row [class^="col-"] {
-  float: left;
-}
-.row [class^="col-"]:not(:last-child) {
-  margin-right: 1rem;
-}
-.row .col-1-of-2 {
-  width: calc((100% - 2rem) / 2);
-}
-.row .col-1-of-3 {
-  width: calc((100% - 2 * 6rem) / 3);
-}
-.row .col-2-of-3 {
-  width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem);
-}
-.row .col-1-of-4 {
-  width: calc((100% - 3 * 6rem) / 4);
-}
-.row .col-2-of-4 {
-  width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem);
-}
-.row .col-3-of-4 {
-  width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
+body::-webkit-scrollbar {
+  display: none;
 }

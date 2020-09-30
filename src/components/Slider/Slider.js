@@ -4,6 +4,7 @@ import "./Slider.css";
 
 function Slider() {
   const [sliderNo, setSliderNo] = useState(1);
+  let scrollInterval = null;
 
   function handlePrevClick() {
     if (sliderNo > 1) setSliderNo(sliderNo - 1);
@@ -14,6 +15,13 @@ function Slider() {
     if (sliderNo < 3) setSliderNo(sliderNo + 1);
     else setSliderNo(1);
   }
+
+  React.useEffect(() => {
+    scrollInterval = setTimeout(() => {
+      handleNextClick();
+    }, 5000);
+    return () => clearTimeout(scrollInterval);
+  });
 
   return (
     <section>

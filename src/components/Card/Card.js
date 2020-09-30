@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./Card.css";
-import { Button } from "../buttons";
+import "./card_input.css";
+// import { Button } from "../buttons";
 
 function Card(props) {
-  const imageUrl = props.imageUrl;
-  //   const title = props.title;
-  const price = props.price;
+  const { title, imageUrl, price } = props;
 
   const [count, setCount] = useState(0);
+  const [isFav, setFav] = useState(false);
 
   function increment() {
     setCount(count + 1);
@@ -17,24 +17,41 @@ function Card(props) {
     if (count > 0) setCount(count - 1);
   }
 
-  return (
-    <div className="card">
-      {/* <p>{title}</p> */}
+  function handleFav() {
+    setFav(!isFav);
+  }
 
-      <div class="row">
-        <div class="col-1-of-2">
-          <img className="card__image" src={imageUrl} alt="cardImage" />
-        </div>
-        <div class="col-1-of-2">
-          <div className="card-content">
-            <div className="card__text">MRP: ₹{price}</div>
-            <label>Quantity</label>
-            <div class="number">
-              <Button onClick={decrement}>-</Button>
-              <input type="text" value={count} />
-              <Button onClick={increment}>+</Button>
-            </div>
-          </div>
+  return (
+    <div class="product-card">
+      <div class="product-header">
+        <img src={imageUrl} alt="product" />
+      </div>
+      <button
+        className={isFav ? "fav btn-active" : "fav btn-norm"}
+        onClick={handleFav}
+      >
+        &#10084;
+      </button>
+      <div class="product-info">
+        <h3>{title}</h3>
+        <h4>
+          ₹{price}{" "}
+          <small>
+            <small>
+              <strike>₹{price + 5}</strike>
+            </small>
+          </small>
+        </h4>
+      </div>
+      <div className="card__input">
+        <div class="quantity-control">
+          <button class="quantity-btn" onClick={decrement}>
+            -
+          </button>
+          <input type="number" class="quantity-input" value={count} />
+          <button class="quantity-btn" onClick={increment}>
+            +
+          </button>
         </div>
       </div>
     </div>

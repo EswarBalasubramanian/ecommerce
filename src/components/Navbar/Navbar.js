@@ -11,7 +11,7 @@ function Navbar() {
   }
 
   return (
-    <nav className="NavbarItems">
+    <nav className="NavbarItems sticky">
       <h1 className="navbar-logo">
         Ecommerce
         <i className="fab fa-shopify"></i>

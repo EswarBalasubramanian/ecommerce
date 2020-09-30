@@ -11,6 +11,13 @@
   text-align: 1.2rem;
 }
 
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
 .navbar-logo {
   color: #fff;
   justify-self: start;
