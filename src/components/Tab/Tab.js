@@ -29,122 +29,49 @@ function TabBig(props) {
   
   const [tabNo, setTabNo] = useState(1);
 
-  function openTab(index) {
-    setTabNo(index);
-  }
-
-  return (
-    <div className="tab--big">
-      <div className="tab">
-        <button
-          className={tabNo === 1 ? "tablinks active" : "tablinks"}
-          onClick={() => openTab(1)}
-        >
-          Best Seller
-        </button>
-        <button
-          className={tabNo === 2 ? "tablinks active" : "tablinks"}
-          onClick={() => openTab(2)}
-        >
-          Based on your search
-        </button>
-        <button
-          className={tabNo === 3 ? "tablinks active" : "tablinks"}
-          onClick={() => openTab(3)}
-        >
-          You may like
-        </button>
-      </div>
-      <div className={tabNo === 1 ? "tabcontent active" : "tabcontent"}>
-        <div className="content-container">
-          {items.map((item, index)=>{
-              return <Card 
-                title={item.name}
-                imageUrl={item.url}
-                price={item.price}
-                key={index}
-              />
-            })
-          }
-        </div>
-      </div>
-
-      <div className={tabNo === 2 ? "tabcontent active" : "tabcontent"}>
-        {/* <h3>Paris</h3> */}
-        <p>
-          This deal is currently unavailable, but you can find more great deals
-          soon.
-        </p>
-      </div>
-
-      <div className={tabNo === 3 ? "tabcontent active" : "tabcontent"}>
-        {/* <h3>Tokyo</h3> */}
-        <p>
-          This deal is currently unavailable, but you can find more great deals
-          soon.
-        </p>
-      </div>
-    </div>
-  );
-}
-
-function TabSmall() {
-  const [tabNo, setTabNo] = useState(1);
+function Tab(props) {
+  const { size, tabHeadings, cardsContents } = props;
+  const [tabNo, setTabNo] = useState(0);
 
   function openTab(index) {
     setTabNo(index);
   }
 
   return (
-    <div className="tab--small">
+    <div className={size}>
       <div className="tab">
-        <button
-          className={tabNo === 1 ? "tablinks active" : "tablinks"}
-          onClick={() => openTab(1)}
-        >
-          Best Deals
-        </button>
-        {/* <button
-          className={tabNo === 2 ? "tablinks active" : "tablinks"}
-          onClick={() => openTab(2)}
-        >
-          Paris
-        </button>
-        <button
-          className={tabNo === 3 ? "tablinks active" : "tablinks"}
-          onClick={() => openTab(3)}
-        >
-          Tokyo
-        </button> */}
+        {tabHeadings.map((heading, index) => {
+          return (
+            <button
+              key={index}
+              className={tabNo === index ? "tablinks active" : "tablinks"}
+              onClick={() => openTab(index)}
+            >
+              {heading}
+            </button>
+          );
+        })}
       </div>
-
-      <div className={tabNo === 1 ? "tabcontent active" : "tabcontent"}>
-        {/* <h3>London</h3> */}
-        <p>
-          This deal is currently unavailable, but you can find more great deals
-          soon.
-        </p>
-      </div>
-
-      <div className={tabNo === 2 ? "tabcontent active" : "tabcontent"}>
-        {/* <h3>Paris</h3> */}
-        <p>
-          This deal is currently unavailable, but you can find more great deals
-          soon.
-        </p>
-      </div>
-
-      <div className={tabNo === 3 ? "tabcontent active" : "tabcontent"}>
-        {/* <h3>Tokyo</h3> */}
-        <p>
-          This deal is currently unavailable, but you can find more great deals
-          soon.
-        </p>
-      </div>
+      {cardsContents.map((cardsContent, index) => {
+        return (
+          <div className={tabNo === index ? "tabcontent active" : "tabcontent"}>
+            <div className="content-container">
+              {cardsContent.map((cardContent, index) => {
+                return (
+                  <Card
+                    key={index}
+                    title={cardContent.title}
+                    imageUrl={cardContent.imageUrl}
+                    price={cardContent.price}
+                  />
+                );
+              })}
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
 
-export { TabBig };
-
-export { TabSmall };
+export default Tab;
