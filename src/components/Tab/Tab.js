@@ -11,7 +11,7 @@ class Item{
   }
 }
 
-function TabBig(props) {
+function Tab(props) {
   const items = [
     new Item(1, "Oil", 35, "https://images.unsplash.com/photo-1526947425960-945c6e72858f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"),
     new Item(2, "Onion", 65, "https://images.unsplash.com/photo-1518977956812-cd3dbadaaf31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"),
@@ -27,9 +27,6 @@ function TabBig(props) {
     {index: 3, title: "You may like"}
   ]
   
-  const [tabNo, setTabNo] = useState(1);
-
-function Tab(props) {
   const { size, tabHeadings, cardsContents } = props;
   const [tabNo, setTabNo] = useState(0);
 
