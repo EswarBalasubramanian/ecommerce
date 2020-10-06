@@ -1,0 +1,26 @@
+.adminPage{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.leftNav{
+    width: 30%;
+    height: 100%;
+}
+
+.mainPage{
+    width: 70%;
+    height: 100%;
+}
+
+.pagesTab{
+    display: flex;
+    flex-flow: column;
+    height: 30px;
+    padding: 5px 0;
+    background: cadetblue;
+    color: white;
+    text-decoration: uppercase;
+    font-size: 16px;
+}
