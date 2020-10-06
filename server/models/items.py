@@ -3,8 +3,10 @@ from db import db
 class ItemModel(db.Model):
     __tablename__ = "items"
 
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, unique=True, nullable= False)
+    code = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80))
+    category = db.Column(db.String(80))
     price = db.Column(db.Float(precision=2))
 
     def __init__(self, name, price):
