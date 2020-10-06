@@ -1,70 +1,56 @@
-const _items = [
-  {
-    id: 1,
-    styles: {
-      transform: "translateX(0)",
-      opacity: 0,
+const _cardsContents = [
+  [
+    {
+      id: 1,
+      title: "Oil",
+      imageUrl:
+        "https://images.unsplash.com/photo-1526947425960-945c6e72858f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      price: 35,
     },
-    player: {
-      title: "Efren Reyes",
-      desc:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget.",
-
-      image: "https://picsum.photos/200/300?random=1",
+    {
+      id: 2,
+      title: "Onion",
+      imageUrl:
+        "https://images.unsplash.com/photo-1518977956812-cd3dbadaaf31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      price: 65,
     },
-  },
-  {
-    id: 2,
-    styles: {
-      transform: "translateX(30rem)",
-      filter: "grayscale(1)",
+    {
+      id: 3,
+      title: "Cola",
+      imageUrl:
+        "https://images.unsplash.com/photo-1520568444554-4698653b539c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      price: 15,
     },
-    player: {
-      title: `Ronnie O'Sullivan`,
-      desc: `Nunc suscipit malesuada cursus. Nullam aliquam dui quis tortor ornare.`,
-
-      image: "https://picsum.photos/200/300?random=2",
+    {
+      id: 4,
+      title: "Soap",
+      imageUrl:
+        "https://images.unsplash.com/photo-1558616180-d76238959a2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      price: 50,
     },
-  },
-  {
-    id: 3,
-    styles: {
-      transform: "translateX(60rem)",
+    {
+      id: 5,
+      title: "Medicine",
+      imageUrl:
+        "https://images.unsplash.com/photo-1565071783280-719b01b29912?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      price: 90,
     },
-    player: {
-      title: "Shane Van Boening",
-      desc:
-        "Maecenas venenatis, nisi ut maximus lacinia, massa ipsum congue erat.",
-
-      image: "https://picsum.photos/200/300?random=3",
+    {
+      id: 6,
+      title: "Blueberry",
+      imageUrl:
+        "https://images.unsplash.com/photo-1501879297843-b73e7b09c6eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      price: 20,
     },
-  },
-  {
-    id: 4,
-    styles: {
-      transform: "translateX(90rem)",
-      filter: "grayscale(1)",
-    },
-    player: {
-      title: "Mike Sigel",
-      desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque.`,
-
-      image: "https://picsum.photos/200/300?random=4",
-    },
-  },
-  {
-    id: 5,
-    styles: {
-      transform: "translateX(120rem)",
-      opacity: 0,
-      filter: "grayscale(1)",
-    },
-    player: {
-      title: "Willie Mosconi",
-      desc: "Donec at faucibus magna, et egestas ipsum. Aliquam nisl turpis.",
-      image: "https://picsum.photos/200/300?random=5",
-    },
-  },
+  ],
+  [],
+  [],
 ];
 
-export default _items;
+export default _cardsContents;
+export const BigTabHeadings = [
+    "Best Seller",
+    "Based on your search",
+    "You may like",
+  ],
+  SmallTabHeadings = ["Best Deals"];
